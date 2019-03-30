@@ -1,0 +1,112 @@
+html {
+  height: 100%;
+}
+
+body {
+  background: url(../src/img/clara_auf_huegel.jpg) no-repeat center;
+  background-size: cover;
+  background-repeat:none;
+  background-color: #1d50a1;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+body#farbspiel {
+  background: url(../src/img/bg-farbspiel.jpg) no-repeat center;
+  background-size: cover;
+}
+
+.navbar {
+  border:0 solid black;
+  border-radius: 0 0 20px 20px;
+}
+
+h1 {
+  color: rgb(189, 199, 219);
+  font-weight: semibold;
+  font-size: 3em;
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
+  0px 8px 13px rgba(0, 0, 0, 0.1),
+  0px 18px 23px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+#content {
+  text-align: center;
+  padding-top: 5%;
+}
+
+hr {
+  width: 66%;
+  color: white;
+}
+
+.fas {
+  padding-right: 0.2em;
+}
+
+
+/*   Color game         */
+button#colorstart {
+  position:relative;
+}
+
+p.hint{
+  background-color: rgba(120,120,120,0.5);
+  border: 2px solid gray;
+  border-radius: 15px;
+  padding:20px;
+  font-size: 1.5em;
+  font-weight: bold;
+  transition: opacity 1s;
+}
+
+div#container {
+  width: 60%;
+  background-color: rgba(120,120,120,0.5);
+  border: 1px solid gray;
+  border-radius: 5px;
+  text-align: center;
+  margin: 10px auto auto auto;
+  display: grid;
+  grid-template-rows: 33% 33% 33%;
+  grid-template-columns: 33% 33% 33%;
+  align-content: space-around;
+  justify-content: space-around;
+}
+
+div.colorDiv {
+  border-radius: 10px;
+  width: 90%;
+  height: 90%;
+  align-self:center;
+  justify-self: center;
+  transition: width 0.4s ease, height 0.4s ease;
+}
+
+div.colorDiv.wrong {
+  opacity: 0.5;
+  width: 80%;
+  height: 80%;
+}
+
+@keyframes pulse {
+    0% {
+     transform: scale(1, 1);
+    }
+
+    50% {
+     transform: scale(1.1, 1.1);
+    }
+
+    100% {
+    transform: scale(1, 1);
+    }
+}
+
+div.colorDiv.right {
+  animation: pulse 0.7s linear infinite;
+  text-align: center;
+}
